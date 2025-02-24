@@ -45,7 +45,7 @@ const TodoForm: React.FC<TodoFormProps> = ({ onAdd }) => {
             >
               <MenuItem value="General">General</MenuItem>
               <MenuItem value="Personal">Personal</MenuItem>
-              {/* Add more categories as needed */}
+              <MenuItem value="Work">Work</MenuItem>
             </Select>
           </FormControl>
         </Grid>

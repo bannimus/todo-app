@@ -56,18 +56,18 @@ function App() {
         </Typography>
         <TodoForm onAdd={addTodo} />
         <FormControl fullWidth variant="outlined" sx={{ mt: 2 }}>
-          <InputLabel id="category-filter-label">Category</InputLabel>
+          <InputLabel id="category-filter-label">Filtering</InputLabel>
           <Select
             labelId="category-filter-label"
             id="category-filter"
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value as string)}
-            label="Category"
+            label="Filtering"
           >
             <MenuItem value="All">All</MenuItem>
             <MenuItem value="General">General</MenuItem>
             <MenuItem value="Personal">Personal</MenuItem>
-            {/* Add more categories as needed */}
+            <MenuItem value="Work">Work</MenuItem>
           </Select>
         </FormControl>
         <TodoList todos={paginatedTodos} onDelete={deleteTodo} />
