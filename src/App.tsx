@@ -7,6 +7,8 @@ import { v4 as uuidv4 } from 'uuid';
 interface Todo {
   id: string;
   text: string;
+  category: string;
+  priority: '🔴' | '🟡' | '🟢';
 }
 
 function App() {
@@ -19,8 +21,8 @@ function App() {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
 
-  const addTodo = (text: string) => {
-    const newTodo: Todo = { id: uuidv4(), text };
+  const addTodo = (text: string, category: string, priority: '🔴' | '🟡' | '🟢') => {
+    const newTodo: Todo = { id: uuidv4(), text, category, priority };
     setTodos([...todos, newTodo]);
   };
 
